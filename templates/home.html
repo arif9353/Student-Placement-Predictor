@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Prediction</title>
+    <style>
+        .col{
+            background-color: rgb(145, 0, 0);
+            margin-top: 10%;
+            margin-left: 3%;
+            margin-right:3%;
+            border-radius: 17px;
+        }
+        img{
+            width: 27%;
+        }
+        #zoom-box:hover{
+            transition: 0.7s;
+            -webkit-transform: scale(1.1);
+	          transform: scale(1.1);
+            background-color: rgba(145, 0, 0, 0.3);
+            color: white;
+        } 
+        #zoom-box2:hover{
+            transition: 1.5s;
+            -webkit-transform: scale(1.4);
+	          transform: scale(1.4);
+            border-radius: 12px 12px 12px 12px;
+            object-fit:contain;
+        } 
+        header{
+          background-color: rgb(145, 0, 0);
+        }
+        .nav-link{
+          color: rgb(255, 255, 255);
+        }   
+        body{
+          background-color: rgb(255, 255, 255);
+        }
+        #panela{
+          font-family: 'Times New Roman', Times, serif;
+          color: rgb(145, 0, 0);
+          text-align: center;
+          display:none;
+        }
+    </style>
+   <script>
+      
+      $(document).ready(function(){
+        $(".cola").on("mouseenter",function(){
+          $("#rowa").css('color','rgb(34, 34, 34)');
+          $("#texta").css('color', 'black');
+          $("#panela").css('color','rgb(145,0,0)');
+        })
+        $(".cola").click(function(){        
+          $(".imga").slideToggle();
+          $("#panela").fadeToggle();
+        });
+        $(".cola").on("mouseleave",function(){
+          $("#rowa").css('color', 'rgb(202, 202, 202)');
+          $("#texta").css('color', 'white');
+          $("#panela").css('color','white');
+        });
+      })
+
+      $(document).ready(function(){
+        $(".colb").on("mouseenter",function(){
+          $("#rowb").css('color','black');
+          $("#textb").css('color', 'black');
+        });
+        $(".colb").on("mouseleave",function(){
+          $("#rowb").css('color', 'rgb(202, 202, 202)');
+          $("#textb").css('color', 'white');
+        });
+      })
+
+      $(document).ready(function(){
+        $(".colc").on("mouseenter",function(){
+          $("#rowc").css('color','black');
+          $("#textc").css('color', 'black');
+        });
+        $(".colc").on("mouseleave",function(){
+          $("#rowc").css('color', 'rgb(202, 202, 202)');
+          $("#textc").css('color', 'white');
+        });
+      })
+
+      $(document).ready(function(){
+        $(".cold").on("mouseenter",function(){
+          $("#rowd").css('color','black');
+          $("#textd").css('color', 'black');
+        });
+        $(".cold").on("mouseleave",function(){
+          $("#rowd").css('color', 'rgb(202, 202, 202)');
+          $("#textd").css('color', 'white');
+        });
+      })
+
+      $(document).ready(function(){
+        $(".cole").on("mouseenter",function(){
+          $("#rowe").css('color','black');
+          $("#texte").css('color', 'black');
+        });
+        $(".cole").on("mouseleave",function(){
+          $("#rowe").css('color', 'rgb(202, 202, 202)');
+          $("#texte").css('color', 'white');
+        });
+      })
+
+      $(document).ready(function(){
+        $(".colf").on("mouseenter",function(){
+          $("#rowf").css('color','black');
+          $("#textf").css('color', 'black');
+        });
+        $(".colf").on("mouseleave",function(){
+          $("#rowf").css('color', 'rgb(202, 202, 202)');
+          $("#textf").css('color', 'white');
+        });
+      })
+
+    </script>
+    
+</head>
+<body>
+   <header>
+    <nav>
+    <ul class="nav nav-underline" style="margin-left: 3%; padding-top: 0.7%; font-size: 20px;">
+       
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" style="color: rgb(255, 255, 255);">Highest Packages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="zoom-box" href="#">Companies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="zoom-box" href="#">Predict</a>
+        </li>
+    </ul>
+    </nav>
+   </header> 
+   <section>
+    <div>
+     <div class="row">
+      <div class="col" id="zoom-box" style="margin-top: 5%;">
+          <a href="#" style="text-decoration: none;">
+            <div class="cola"> 
+              <div class="imga">
+                <img src="/static/arif.png" class="rounded mx-auto d-block" alt="stud1" id="zoom-box2">
+              </div>
+              <div class="text"> 
+                 <p id="texta" style="font-size: 34px; color: rgb(255, 255, 255); font-family: 'Times New Roman', Times, serif; font-weight:bold; text-align: center; margin-bottom: 0px; position: relative;">Mohammed Arif</p>
+                 <div style="font-size: 16px; color: rgb(202, 202, 202); font-family: 'Times New Roman', Times, serif; font-weight:800; text-align: left;">
+                    <div class="row" id="rowa" style="margin: 5px;">
+                       <div class="col-md-4">Amazon Web Services</div>
+                       <div class="col-md-4 offset-md-4" style="text-align: right;">24 LPA</div>
+                    </div>
+                 </div>
+              </div>      
+            </div>
+          </a>
+      </div>
+      <div class="col order-5" id="zoom-box" style="margin-top: 5%;">
+          <a href="#" style="text-decoration: none;">
+             <div class="colb">
+               <img src="/static/mihiresh.png" class="rounded mx-auto d-block" alt="stud1" id="zoom-box2">
+               <p id="textb" style="font-size: 34px; color: rgb(255, 255, 255); font-family: 'Times New Roman', Times, serif; font-weight:bold; text-align: center; margin-bottom: 0px; position: relative;">Mihiresh Joshi</p>
+               <div style="font-size: 16px; color: rgb(202, 202, 202); font-family: 'Times New Roman', Times, serif; font-weight:800; text-align: left;">
+                   <div class="row" id="rowb" style="margin: 5px;">
+                     <div class="col-md-4">Capgemini</div>
+                     <div class="col-md-4 offset-md-4" style="text-align: right;">20 LPA</div>
+                   </div>
+               </div>
+             </div>
+          </a>
+      </div>
+      <div class="col order-1" id="zoom-box" style="margin-top: 5%;">
+        <a href="#" style="text-decoration: none;">
+            <div class="colc">
+            <img src="/static/soham.png" class="rounded mx-auto d-block" alt="stud1" id="zoom-box2">
+            <p id="textc" style="font-size: 34px; color: rgb(255, 255, 255); font-family: 'Times New Roman', Times, serif; font-weight:bold; text-align: center; margin-bottom: 0px; position: relative;">Soham Kulkarni</p>
+            <div style="font-size: 16px; color: rgb(202, 202, 202); font-family: 'Times New Roman', Times, serif; font-weight:800; text-align: left;">
+                <div class="row" id="rowc" style="margin: 5px;">
+                  <div class="col-md-4">L&T Infotech</div>
+                  <div class="col-md-4 offset-md-4" style="text-align: right;">22 LPA</div>
+                </div>
+            </div>
+            </div>
+            </a>
+      </div>
+     </div>
+    </div>
+    <div style="margin-bottom: 30px;">
+        <div class="row">
+         <div class="col" id="zoom-box" style="margin-top: 5%;">
+           <a href="#" style="text-decoration: none;">
+           <div class="cold">
+           <img src="/static/prajwal.png" class="rounded mx-auto d-block" alt="stud1" id="zoom-box2">
+           <p id="textd" style="font-size: 34px; color: rgb(255, 255, 255); font-family: 'Times New Roman', Times, serif; font-weight:bold; text-align: center; margin-bottom: 0px; position: relative;">Prajwal Maske</p>
+           <div style="font-size: 16px; color: rgb(202, 202, 202); font-family: 'Times New Roman', Times, serif; font-weight:800; text-align: left;">
+               <div class="row" id="rowd" style="margin: 5px;">
+                 <div class="col-md-4">Unity Technologies</div>
+                 <div class="col-md-4 offset-md-4" style="text-align: right;">18 LPA</div>
+               </div>
+           </div>
+           </div>
+           </a>
+         </div>
+         <div class="col order-5" id="zoom-box" style="margin-top: 5%;">
+           <a href="#" style="text-decoration: none;">
+               <div class="cole">
+               <img src="/static/omi.png" class="rounded mx-auto d-block" alt="stud1" id="zoom-box2">
+               <p id="texte" style="font-size: 34px; color: rgb(255, 255, 255); font-family: 'Times New Roman', Times, serif; font-weight:bold; text-align: center; margin-bottom: 0px; position: relative;">Omi Gandge</p>
+               <div style="font-size: 16px; color: rgb(202, 202, 202); font-family: 'Times New Roman', Times, serif; font-weight:800; text-align: left;">
+                   <div class="row" id="rowe" style="margin: 5px;">
+                     <div class="col-md-4">Tata Consultancy</div>
+                     <div class="col-md-4 offset-md-4" style="text-align: right;">15 LPA</div>
+                   </div>
+               </div>
+               </div>
+               </a>
+         </div>
+         <div class="col order-1" id="zoom-box" style="margin-top: 5%;">
+           <a href="#" style="text-decoration: none;">
+               <div class="colf">
+               <img src="/static/parth.png" class="rounded mx-auto d-block" alt="stud1" id="zoom-box2">
+               <p id="textf" style="font-size: 34px; color: rgb(255, 255, 255); font-family: 'Times New Roman', Times, serif; font-weight:bold; text-align: center; margin-bottom: 0px; position: relative;">Parth Athalye</p>
+               <div style="font-size: 16px; color: rgb(202, 202, 202); font-family: 'Times New Roman', Times, serif; font-weight:800; text-align: left;">
+                   <div class="row" id="rowf" style="margin: 5px;">
+                     <div class="col-md-4">Tata Consultancy</div>
+                     <div class="col-md-4 offset-md-4" style="text-align: right;">15 LPA</div>
+                   </div>
+               </div>
+               </div>
+               </a>
+         </div>
+        </div>
+      </div> 
+   </section>
+</body>
+</html>
