@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        header {
+            background-color: rgb(145, 0, 0);
+        }
+
+        .nav-link {
+            color: rgb(255, 255, 255);
+        }
+
+        #zoom-box:hover {
+            transition: 0.7s;
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            background-color: rgba(145, 0, 0, 0.3);
+            color: white;
+        }
+
+        form {
+            padding: auto;
+            justify-content: center;
+            margin-inline: 15%;
+            margin-top: 5%;
+            margin-bottom: 2%;
+            outline-style: solid;
+            outline-width: 1px;
+            outline-color: rgb(145, 0, 0);
+            border-radius: 17px;
+            max-width: 75%;
+            background: rgba(145, 0, 0, 0.05);
+            flex-wrap: wrap;
+        }
+
+        /*  form input, select{
+            margin: 20px;
+           position: relative;
+            text-align: center;
+            justify-content: end;
+            width: 25%;
+        } */
+        form label {
+            color: #910000;
+            width: 25%;
+            min-width: min-content;
+            max-width: 25%;
+            text-align: center;
+            font-size: 24px;
+            font-family: Merge One;
+            font-style: normal;
+            font-weight: 400;
+            overflow-wrap: break-word;
+
+        }
+
+        form input,
+        select {
+            width: 25%;
+            height: 30px;
+            background: rgba(255, 159.38, 159.38, 0.10);
+            border-radius: 10px;
+            border-left: 0.50px rgba(145, 0, 0, 0.54) solid;
+            border-top: 0.50px rgba(145, 0, 0, 0.54) solid;
+            border-right: 0.50px rgba(145, 0, 0, 0.54) solid;
+            border-bottom: 0.50px rgba(145, 0, 0, 0.54) solid;
+            position: relative;
+            margin: 20px;
+            flex-wrap: wrap;
+            overflow-wrap: break-word;
+            min-width: fit-content;
+        }
+
+        /* form label{
+            width: 25%;
+            text-align: right;
+            font-family:'Times New Roman', Times, serif;
+            font-size: large;
+            font-weight: bold;
+        } */
+        /*  #sb{
+            background-color: rgb(145, 0, 0);
+            color: white;
+            border-radius: 7px;
+            border: 0px;
+            padding: 10px;
+        } */
+        #sb {
+            width: 17%;
+
+            background: #910000;
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+            border-radius: 7px;
+            text-align: center;
+            color: white;
+            min-width: fit-content;
+        }
+
+        #sb:hover {
+            transition: 0.7s;
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        p {
+            text-align: center;
+            color: black;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .radios {
+            display: none;
+        }
+
+        #scor {
+            text-align: center;
+            /* pointer-events: none; */
+        }
+
+    
+        #atsbt {
+            background: #910000;
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+            border-radius: 7px;
+            text-align: center;
+            color: white;
+            min-width: fit-content;
+            border-left: 0.50px rgba(145, 0, 0, 0.54) solid;
+            border-top: 0.50px rgba(145, 0, 0, 0.54) solid;
+            border-right: 0.50px rgba(145, 0, 0, 0.54) solid;
+            border-bottom: 0.50px rgba(145, 0, 0, 0.54) solid;
+            width: 25%;
+            height: 30px;
+        }
+
+        /*   #atsbt:hover{
+            transition: 0.7s;
+            -webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+        } */
+    </style>
+    <script>
+        function vallidate_form() {
+            let ten = document.getElementById("tenper").value;
+            let twe = document.getElementById("tweper").value;
+            let sem1 = document.getElementById("sem1").value;
+            let sem2 = document.getElementById("sem2").value;
+            let sem3 = document.getElementById("sem3").value;
+            let sem4 = document.getElementById("sem4").value;
+            let sem5 = document.getElementById("sem5").value;
+            let sem6 = document.getElementById("sem6").value;
+            let cgp = document.getElementById("cgpa").value;
+            let gap = document.getElementById("gaps").value;
+            let inter = document.getElementById("intern").value;
+            let certi = document.getElementById("certi").value;
+            if (isNaN(ten)) {
+                alert("enter a number");
+                return false;
+            }
+            if (isNaN(twe)) {
+                alert("enter a number");
+                return false;
+            }
+            if (isNaN(sem3)) {
+                alert("enter a number");
+                return false;
+            }
+            if (isNaN(sem4)) {
+                alert("enter a number");
+                return false;
+            }
+            if (isNaN(sem5)) {
+                alert("enter a number");
+                return false;
+            }
+            if (isNaN(sem6)) {
+                alert("enter a number");
+                return false;
+            }
+            if (isNaN(cgp)) {
+                alert("enter a number");
+                return false;
+            }
+            if (gap < 0) {
+                alert("Number of years cant be negative");
+                return false;
+            }
+            if (isNaN(intern)) {
+                alert("enter a number");
+                return false;
+            }
+            if (isNaN(certi)) {
+                alert("enter a number");
+                return false;
+            }
+        }
+        window.onload = function () {
+            var variableValue = localStorage.getItem('variableName');
+            document.getElementById('scor').value = variableValue;
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav nav-underline" style="margin-left: 3%; padding-top: 0.7%; font-size: 20px;">
+
+                <li class="nav-item">
+                    <a class="nav-link" id="zoom-box" href="/">Highest Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="zoom-box" href="/company">Companies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" style="color: white;" aria-current="page" href="/predict">Predict</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section style="width: 100%;">
+        <div class="form">
+            <form style="text-align: center;" onsubmit="return vallidate_form()" method="post">
+                <h1
+                    style="text-align: center; color: #910000; font-size: 36px; font-family:Merge One; font-weight: 400; word-wrap: break-word; min-width: fit-content; padding-top: 23px;">
+                    Input Details</h1>
+                <br>
+                <div style="width: 70%; height: 100%; margin-left: 15%; border: 0.50px #910000 solid"></div>
+                <br>
+                <label>Branch</label>
+                <select name="Branch" style="text-align: center;" id="br">
+                    <option value="COMPUTER">COMPUTER</option>
+                    <option value="IT">IT</option>
+                    <option value="INSTRUMENTATION">INSTRUMENTATION</option>
+                    <option value="EXTC">EXTC</option>
+                    <option value="ELECTRONICS">ELECTRONICS</option>
+                </select><br>
+                <label>10th %</label>
+                <input type="text" name="tenper" id="tenper" required><br>
+                <label>12th %</label>
+                <input type="text" name="tweper" id="tweper" required><br>
+                <label>Diploma percentage</label>
+                <input type="text" name="dp" id="dp" required><br>
+                <label>Sem3 marks</label>
+                <input type="text" name="sem3" id="sem3" required><br>
+                <label>Sem4 marks</label>
+                <input type="text" name="sem4" id="sem4" required><br>
+                <label>Sem5 marks</label>
+                <input type="text" name="sem5" id="sem5" required><br>
+                <label>Sem6 marks</label>
+                <input type="text" name="sem6" id="sem6" required><br>
+                <label>Avg CGPA</label>
+                <input type="text" name="cgpa" id="cgpa" required><br>
+                <label>Gaps</label>
+                <input type="number" name="gaps" id="gaps" required><br>
+                <label style="min-width: 25%;">Aptitude test score</label>
+                <input type="text" name="variableName" id="scor" readonly="readonly"><br>
+                <label style="min-width: 25%;">Number of Internships</label>
+                <input type="text" name="Internships" id="intern"><br>
+                <label style="min-width: 25%;">Number of certifications</label>
+                <input type="text" name="certifications" id="certi"><br>
+                <input type="submit" value="Predict" id="sb">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

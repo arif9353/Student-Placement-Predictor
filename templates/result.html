@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    <style>
+        header{
+            background-color: rgb(145, 0, 0);
+        }
+        .nav-link{
+            color: rgb(255, 255, 255);
+        } 
+        .container{
+            background-color: rgba(145, 0, 0, 0.05);
+            width: 70%;
+            margin:5%, 15%, 10%;
+            margin-top: 5%;
+            outline-style:solid;
+            outline-width: 1px;
+            outline-color: rgb(145, 0, 0);
+            border-radius: 17px;
+        }
+        .container .title{
+            text-align: center;
+            font-family: Merge One;
+            font-size:36px;
+            font-weight: bold;
+            color: rgb(145, 0, 0);
+            padding-top: 23px;
+        }
+        .container .text{
+            text-align: center;
+            font-family: Merge One;
+            font-size: 24px;
+            font-weight:300;
+            color: rgb(145, 0, 0);
+            margin: 10px;
+        }
+        .container .price{
+            text-align: center;
+            font-family: Merge One;
+            font-size:28px;
+            color: rgb(104, 190, 123);
+        }
+        .container .disclaimer{
+            text-align: center;
+            color: #6c3636; 
+            font-size: 16px;
+            font-family: Merge One;
+            min-width: fit-content;
+            padding-left: 3%;
+            padding-right: 3%;
+            line-height: 35px;
+        }
+        .container .note{
+            text-align: justify;
+            text-justify: auto;
+            color: #ff0000; 
+            font-size: 12px;
+            font-family: Merge One;
+            min-width: fit-content;
+            padding:1% 3% 1%;
+            line-height: 35px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav nav-underline" style="margin-left: 3%; padding-top: 0.7%; font-size: 20px;">
+               
+                <li class="nav-item">
+                  <a class="nav-link" id="zoom-box" href="/">Highest Packages</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="zoom-box" href="/company">Companies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/predict" style="color: rgb(255, 255, 255);">Predict</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <p class="title">{{ intro }}<Br><span class="price">{{ res }}</span></p>
+                <p class="title">{{ intro2 }}<Br><span class="price">{{ res2 }}</span></p>
+            <p class="disclaimer">This result is a mere prediction based on your previous performance and our Machine Learning model. If you feel you deserve better package you can always work hard. Also, don't rely too much on the good results as even they are not guaranteed. This ML model like all other models is not 100% correct so keep that in mind while making any further decisions based on this output.</p>
+            <p class="note"><b>*NOTE:</b> These results should not be perceived as infallible or absolute truths.</p>
+        </div>
+    </section>
+</body>
+</html>
