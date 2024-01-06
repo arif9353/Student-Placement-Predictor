@@ -1,11 +1,22 @@
 import pickle
 import numpy as np
+import os
 
-model = pickle.load(open('model\\placement_model1.pkl','rb'))
+# Get the absolute path of the current script
+script_path = os.path.abspath(__file__)
 
-model2 = pickle.load(open('model\\placement_model2.pkl','rb'))
+# Get the directory containing the script
+script_directory = os.path.dirname(script_path)
 
+# Set the working directory to the script directory
+os.chdir(script_directory)
 
+# Use relative paths from the script directory
+model_path = os.path.join(script_directory, 'placement_model1.pkl')
+model = pickle.load(open(model_path, 'rb'))
+
+model2_path = os.path.join(script_directory, 'placement_model2.pkl')
+model2 = pickle.load(open(model2_path, 'rb'))
 
 def predictStatus(inputValues):
     inputValues = np.array(inputValues).reshape(1,-1)
