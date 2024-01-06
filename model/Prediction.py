@@ -1,9 +1,9 @@
 import pickle
 import numpy as np
 
-model = pickle.load(open('./placement_model1.pkl','rb'))
+model = pickle.load(open('model\\placement_model1.pkl','rb'))
 
-model2 = pickle.load(open('./placement_model2.pkl','rb'))
+model2 = pickle.load(open('model\\placement_model2.pkl','rb'))
 
 
 
